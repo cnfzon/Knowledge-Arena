@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_QUESTIONS 100
-#define MAX_OPTIONS 4
+#define INITIAL_QUESTIONS 100 // 初始題目數量
+#define MAX_OPTIONS 4         // 每題最多選項數量
 
 typedef struct {
     char question[256];
@@ -11,11 +11,12 @@ typedef struct {
     int correctOption;
 } Question;
 
-void loadQuestionsFromTxt(const char* filename, Question questions[], int* numQuestions);
-void playGame(Question questions[], int numQuestions);
+void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions);
+void playGame(Question* questions, int numQuestions);
 
 int main() {
-    Question* questions = malloc(MAX_QUESTIONS * sizeof(Question));
+    int maxQuestions = INITIAL_QUESTIONS;
+    Question* questions = malloc(maxQuestions * sizeof(Question)); // 初始分配空間
     if (questions == NULL) {
         perror("記憶體分配失敗");
         return 1;
@@ -24,7 +25,7 @@ int main() {
     int numQuestions = 0;
 
     printf("歡迎來到知識王遊戲！\n");
-    loadQuestionsFromTxt("questions.txt", questions, &numQuestions);
+    loadQuestionsFromTxt("questions.txt", &questions, &numQuestions, &maxQuestions);
 
     if (numQuestions > 0) {
         printf("成功載入 %d 題！準備開始遊戲！\n", numQuestions);
@@ -40,7 +41,7 @@ int main() {
 }
 
 // 題目載入函數
-void loadQuestionsFromTxt(const char* filename, Question questions[], int* numQuestions) {
+void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions) {
     FILE* file = fopen(filename, "r");
     if (file == NULL) {
         perror("無法開啟題目檔案");
@@ -48,37 +49,44 @@ void loadQuestionsFromTxt(const char* filename, Question questions[], int* numQu
     }
 
     char line[512];
-    int count = 0;
-
     while (fgets(line, sizeof(line), file)) {
-        if (count >= MAX_QUESTIONS) {
-            printf("已達到最大題目數量上限 %d。\n", MAX_QUESTIONS);
-            break;
+        if (*numQuestions >= *maxQuestions) {
+            // 動態擴充空間
+            *maxQuestions *= 2; // 擴充為原來的 2 倍
+            Question* temp = realloc(*questions, (*maxQuestions) * sizeof(Question));
+            if (temp == NULL) {
+                perror("記憶體擴充失敗");
+                free(*questions);
+                fclose(file);
+                exit(1);
+            }
+            *questions = temp;
         }
 
         if (line[0] == '\n') continue; // 跳過空行
-        strncpy(questions[count].question, line, sizeof(questions[count].question));
-        questions[count].question[strcspn(questions[count].question, "\n")] = '\0'; // 移除換行符
+
+        strncpy((*questions)[*numQuestions].question, line, sizeof((*questions)[*numQuestions].question));
+        (*questions)[*numQuestions].question[strcspn((*questions)[*numQuestions].question, "\n")] = '\0'; // 移除換行符
 
         if (fgets(line, sizeof(line), file) == NULL) break;
         char* token = strtok(line, ";");
         int optionIndex = 0;
         while (token != NULL && optionIndex < MAX_OPTIONS) {
-            strncpy(questions[count].options[optionIndex], token, sizeof(questions[count].options[optionIndex]));
+            strncpy((*questions)[*numQuestions].options[optionIndex], token, sizeof((*questions)[*numQuestions].options[optionIndex]));
+            (*questions)[*numQuestions].options[optionIndex][strcspn((*questions)[*numQuestions].options[optionIndex], "\n")] = '\0'; // 移除換行符
             token = strtok(NULL, ";");
             optionIndex++;
         }
 
         if (fgets(line, sizeof(line), file) == NULL) break;
-        questions[count].correctOption = atoi(line) - 1;
-        count++;
+        (*questions)[*numQuestions].correctOption = atoi(line) - 1;
+        (*numQuestions)++;
     }
 
     fclose(file);
-    *numQuestions = count;
 }
 
-void playGame(Question questions[], int numQuestions) {
+void playGame(Question* questions, int numQuestions) {
     int score = 0;
     for (int i = 0; i < numQuestions; i++) {
         printf("\n題目 %d: %s\n", i + 1, questions[i].question);

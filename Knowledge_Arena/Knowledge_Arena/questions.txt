@@ -1,7 +1,599 @@
-C 語言的開發者是誰？
-Dennis Ritchie;Bjarne Stroustrup;James Gosling;Guido van Rossum
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
 1
 
-哪一年推出了 C 語言？
-1969;1972;1980;1991
-2
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
+
+Who invented the C programming language?
+Dennis Ritchie;Brian Kernighan;Bell Labs;Guido van Rossum
+1
+
+What is the full form of VHDL?
+VHSIC Hardware Description Language;Virtual Hardware Description Language;Verified HDL;Virtual HDL
+1
+
+What is the main purpose of VHDL?
+Hardware description;Software development;Web design;Data analysis
+1
+
+Who invented the Java programming language?
+Sun Microsystems;Microsoft;Apple;Google
+1
+
+Which keyword is used to inherit a class in Java?
+extends;inherits;implements;super
+1
+
+What type of language is Java?
+Interpreted;Compiled;Both Compiled and Interpreted;Script
+3
+
+Who is the creator of Python?
+Guido van Rossum;Dennis Ritchie;Brian Kernighan;James Gosling
+1
+
+What does HTML stand for?
+Hyper Text Markup Language;Hyperlinks and Text Markup Language;Home Tool Markup Language;Hyper Text Marked Language
+1
+
+Which tag is used to define hyperlinks in HTML?
+<a>;<p>;<b>;<img>
+1
