@@ -3,10 +3,12 @@
 #include <string.h>
 #include <windows.h>
 #include <conio.h> // 用於非阻塞式輸入（_kbhit 和 _getch）
+#include <time.h>  // 用於隨機數種子初始化
 
-#define INITIAL_QUESTIONS 100 // 初始題目數量
-#define MAX_OPTIONS 4         // 每題最多選項數量
-#define TIME_LIMIT 15         // 每題回答時間限制（秒）
+#define TOTAL_QUESTIONS 150  // 題目總數
+#define SELECTED_QUESTIONS 5 // 每次選擇的題目數量
+#define MAX_OPTIONS 4        // 每題最多選項數量
+#define TIME_LIMIT 15        // 每題回答時間限制（秒）
 
 typedef struct {
     char question[256];
@@ -14,37 +16,41 @@ typedef struct {
     int correctOption;
 } Question;
 
-void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions);
+void loadQuestionsFromTxt(const char* filename, Question* questions, int* totalQuestions);
+void selectRandomQuestions(Question* allQuestions, int totalQuestions, Question* selectedQuestions, int selectedCount);
 void playGame(Question* questions, int numQuestions);
 
 int main() {
-    int maxQuestions = INITIAL_QUESTIONS;
-    Question* questions = malloc(maxQuestions * sizeof(Question)); // 初始分配空間
-    if (questions == NULL) {
+    srand((unsigned int)time(NULL)); // 初始化隨機數種子
+
+    Question* allQuestions = malloc(TOTAL_QUESTIONS * sizeof(Question)); // 分配所有題目的記憶體
+    if (allQuestions == NULL) {
         perror("記憶體分配失敗");
         return 1;
     }
 
-    int numQuestions = 0;
+    Question selectedQuestions[SELECTED_QUESTIONS]; // 存儲隨機選出的題目
+    int totalQuestions = 0;
 
     printf("歡迎來到知識王遊戲！\n");
-    loadQuestionsFromTxt("questions.txt", &questions, &numQuestions, &maxQuestions);
+    loadQuestionsFromTxt("questions.txt", allQuestions, &totalQuestions);
 
-    if (numQuestions > 0) {
-        printf("成功載入 %d 題！準備開始遊戲！\n", numQuestions);
-        playGame(questions, numQuestions); // 執行遊戲邏輯
+    if (totalQuestions > 0) {
+        printf("成功載入 %d 題！\n", totalQuestions);
+        selectRandomQuestions(allQuestions, totalQuestions, selectedQuestions, SELECTED_QUESTIONS);
+        playGame(selectedQuestions, SELECTED_QUESTIONS); // 使用隨機選出的題目
     }
     else {
         printf("題目載入失敗或檔案為空。\n");
     }
 
-    free(questions); // 釋放記憶體
+    free(allQuestions); // 釋放記憶體
     printf("感謝遊玩！\n");
     return 0;
 }
 
 // 題目載入函數
-void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions) {
+void loadQuestionsFromTxt(const char* filename, Question* questions, int* totalQuestions) {
     FILE* file = fopen(filename, "r");
     if (file == NULL) {
         perror("無法開啟題目檔案");
@@ -52,41 +58,61 @@ void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQu
     }
 
     char line[512];
+    int count = 0;
+
     while (fgets(line, sizeof(line), file)) {
-        if (*numQuestions >= *maxQuestions) {
-            // 動態擴充空間
-            *maxQuestions *= 2; // 擴充為原來的 2 倍
-            Question* temp = realloc(*questions, (*maxQuestions) * sizeof(Question));
-            if (temp == NULL) {
-                perror("記憶體擴充失敗");
-                free(*questions);
-                fclose(file);
-                exit(1);
-            }
-            *questions = temp;
+        if (count >= TOTAL_QUESTIONS) {
+            printf("已達到最大題目數量上限 %d。\n", TOTAL_QUESTIONS);
+            break;
         }
 
         if (line[0] == '\n') continue; // 跳過空行
 
-        strncpy((*questions)[*numQuestions].question, line, sizeof((*questions)[*numQuestions].question));
-        (*questions)[*numQuestions].question[strcspn((*questions)[*numQuestions].question, "\n")] = '\0'; // 移除換行符
+        strncpy_s(questions[count].question, sizeof(questions[count].question), line, _TRUNCATE);
+        questions[count].question[strcspn(questions[count].question, "\n")] = '\0'; // 移除換行符
 
         if (fgets(line, sizeof(line), file) == NULL) break;
-        char* token = strtok(line, ";");
+
+        char* token;
+        char* context = NULL; // 用於 strtok_s 的上下文
+        token = strtok_s(line, ";", &context);
+
         int optionIndex = 0;
         while (token != NULL && optionIndex < MAX_OPTIONS) {
-            strncpy((*questions)[*numQuestions].options[optionIndex], token, sizeof((*questions)[*numQuestions].options[optionIndex]));
-            (*questions)[*numQuestions].options[optionIndex][strcspn((*questions)[*numQuestions].options[optionIndex], "\n")] = '\0'; // 移除換行符
-            token = strtok(NULL, ";");
+            strncpy_s(questions[count].options[optionIndex], sizeof(questions[count].options[optionIndex]), token, _TRUNCATE);
+            questions[count].options[optionIndex][strcspn(questions[count].options[optionIndex], "\n")] = '\0'; // 移除換行符
+            token = strtok_s(NULL, ";", &context);
             optionIndex++;
         }
 
         if (fgets(line, sizeof(line), file) == NULL) break;
-        (*questions)[*numQuestions].correctOption = atoi(line) - 1;
-        (*numQuestions)++;
+        questions[count].correctOption = atoi(line) - 1; // 正確答案索引
+        count++;
     }
 
     fclose(file);
+    *totalQuestions = count;
+}
+
+// 隨機選擇題目函數
+void selectRandomQuestions(Question* allQuestions, int totalQuestions, Question* selectedQuestions, int selectedCount) {
+    int selectedIndices[SELECTED_QUESTIONS] = { 0 }; // 確保初始化
+    int isChosen;
+
+    for (int i = 0; i < selectedCount; i++) {
+        do {
+            isChosen = 0;
+            selectedIndices[i] = rand() % totalQuestions; // 隨機選擇一個索引
+            for (int j = 0; j < i; j++) {
+                if (selectedIndices[i] == selectedIndices[j]) {
+                    isChosen = 1; // 發現重複索引
+                    break;
+                }
+            }
+        } while (isChosen); // 如果已選過則重新選擇
+
+        selectedQuestions[i] = allQuestions[selectedIndices[i]];
+    }
 }
 
 // 遊戲邏輯函數
