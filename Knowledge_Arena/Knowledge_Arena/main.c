@@ -35,17 +35,40 @@ int main() {
     printf("歡迎來到知識王遊戲！\n");
     loadQuestionsFromTxt("questions.txt", allQuestions, &totalQuestions);
 
-    if (totalQuestions > 0) {
-        printf("成功載入 %d 題！\n", totalQuestions);
+    if (totalQuestions <= 0) {
+        printf("題目載入失敗或檔案為空。\n");
+        free(allQuestions);
+        return 1;
+    }
+
+    int continueGame = 1; // 繼續遊戲標誌
+    while (continueGame) {
+        printf("\n準備開始遊戲！\n");
         selectRandomQuestions(allQuestions, totalQuestions, selectedQuestions, SELECTED_QUESTIONS);
         playGame(selectedQuestions, SELECTED_QUESTIONS); // 使用隨機選出的題目
-    }
-    else {
-        printf("題目載入失敗或檔案為空。\n");
+
+        // 提供繼續遊戲或離開遊戲的選項
+        int choice = 0;
+        while (choice != 1 && choice != 2) {
+            printf("\n遊戲結束！請選擇：\n");
+            printf("1. 繼續遊戲\n");
+            printf("2. 離開遊戲\n");
+            printf("請輸入您的選擇 (1-2): ");
+            scanf("%d", &choice);
+            if (choice == 1) {
+                continueGame = 1; // 繼續遊戲
+            }
+            else if (choice == 2) {
+                continueGame = 0; // 離開遊戲
+                printf("感謝遊玩！再見！\n");
+            }
+            else {
+                printf("輸入無效，請重新輸入。\n");
+            }
+        }
     }
 
     free(allQuestions); // 釋放記憶體
-    printf("感謝遊玩！\n");
     return 0;
 }
 
@@ -144,11 +167,6 @@ void playGame(Question* questions, int numQuestions) {
                 char input = _getch(); // 獲取輸入字元
                 if (input >= '1' && input <= '4') { // 判斷是否為 1-4
                     userAnswer = input - '0' - 1; // 轉換為 0 基準索引
-                    break;
-                }
-                else {
-                    printf("\n輸入錯誤！\n");
-                    userAnswer = -1; // 無效輸入
                     break;
                 }
             }
