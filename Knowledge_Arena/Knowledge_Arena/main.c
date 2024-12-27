@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <windows.h>
+#include <conio.h> // 用於非阻塞式輸入（_kbhit 和 _getch）
 
 #define INITIAL_QUESTIONS 100 // 初始題目數量
 #define MAX_OPTIONS 4         // 每題最多選項數量
+#define TIME_LIMIT 15         // 每題回答時間限制（秒）
 
 typedef struct {
     char question[256];
@@ -86,19 +89,47 @@ void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQu
     fclose(file);
 }
 
+// 遊戲邏輯函數
 void playGame(Question* questions, int numQuestions) {
     int score = 0;
+
     for (int i = 0; i < numQuestions; i++) {
         printf("\n題目 %d: %s\n", i + 1, questions[i].question);
         for (int j = 0; j < MAX_OPTIONS; j++) {
             printf("%d. %s\n", j + 1, questions[i].options[j]);
         }
 
-        int answer;
-        printf("請輸入答案 (1-%d): ", MAX_OPTIONS);
-        scanf("%d", &answer);
+        int answer = -1; // 預設答案為無效值
+        int timeLeft = TIME_LIMIT;
 
-        if (answer - 1 == questions[i].correctOption) {
+        printf("請輸入答案 (1-%d) [限時 %d 秒]: \n", MAX_OPTIONS, TIME_LIMIT);
+
+        // 倒數計時邏輯
+        while (timeLeft > 0) {
+            printf("\r剩餘時間: %d 秒", timeLeft);
+            fflush(stdout); // 強制刷新輸出
+
+            Sleep(1000); // 等待 1 秒
+            timeLeft--;
+
+            if (_kbhit()) { // 檢查是否有鍵盤輸入
+                char input = _getch(); // 獲取輸入字元
+                if (input >= '1' && input <= '4') { // 判斷是否為 1-4
+                    answer = input - '0'; // 轉換為整數
+                    break;
+                }
+                else {
+                    printf("\n輸入錯誤！\n");
+                    answer = -1; // 無效輸入
+                    break;
+                }
+            }
+        }
+
+        if (timeLeft == 0) {
+            printf("\n時間到！視為放棄作答！\n");
+        }
+        else if (answer - 1 == questions[i].correctOption) {
             printf("正確！\n");
             score++;
         }
@@ -106,5 +137,6 @@ void playGame(Question* questions, int numQuestions) {
             printf("錯誤！正確答案是 %s\n", questions[i].options[questions[i].correctOption]);
         }
     }
+
     printf("\n遊戲結束！你的總分是 %d/%d\n", score, numQuestions);
 }

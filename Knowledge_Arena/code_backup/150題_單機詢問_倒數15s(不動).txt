@@ -1,0 +1,142 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <windows.h> // 用於多執行緒和計時器
+
+#define INITIAL_QUESTIONS 100 // 初始題目數量
+#define MAX_OPTIONS 4         // 每題最多選項數量
+#define TIME_LIMIT 15         // 每題回答時間限制（秒）
+
+typedef struct {
+    char question[256];
+    char options[MAX_OPTIONS][100];
+    int correctOption;
+} Question;
+
+volatile int timeUp = 0; // 全局變數，標記時間是否到
+
+void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions);
+void playGame(Question* questions, int numQuestions);
+
+// 計時器執行函數
+DWORD WINAPI timerThread(LPVOID lpParam) {
+    Sleep(TIME_LIMIT * 1000); // 等待 TIME_LIMIT 秒
+    timeUp = 1; // 時間到，設置標記
+    return 0;
+}
+
+int main() {
+    int maxQuestions = INITIAL_QUESTIONS;
+    Question* questions = malloc(maxQuestions * sizeof(Question)); // 初始分配空間
+    if (questions == NULL) {
+        perror("記憶體分配失敗");
+        return 1;
+    }
+
+    int numQuestions = 0;
+
+    printf("歡迎來到知識王遊戲！\n");
+    loadQuestionsFromTxt("questions.txt", &questions, &numQuestions, &maxQuestions);
+
+    if (numQuestions > 0) {
+        printf("成功載入 %d 題！準備開始遊戲！\n", numQuestions);
+        playGame(questions, numQuestions); // 執行遊戲邏輯
+    }
+    else {
+        printf("題目載入失敗或檔案為空。\n");
+    }
+
+    free(questions); // 釋放記憶體
+    printf("感謝遊玩！\n");
+    return 0;
+}
+
+// 題目載入函數
+void loadQuestionsFromTxt(const char* filename, Question** questions, int* numQuestions, int* maxQuestions) {
+    FILE* file = fopen(filename, "r");
+    if (file == NULL) {
+        perror("無法開啟題目檔案");
+        return;
+    }
+
+    char line[512];
+    while (fgets(line, sizeof(line), file)) {
+        if (*numQuestions >= *maxQuestions) {
+            // 動態擴充空間
+            *maxQuestions *= 2; // 擴充為原來的 2 倍
+            Question* temp = realloc(*questions, (*maxQuestions) * sizeof(Question));
+            if (temp == NULL) {
+                perror("記憶體擴充失敗");
+                free(*questions);
+                fclose(file);
+                exit(1);
+            }
+            *questions = temp;
+        }
+
+        if (line[0] == '\n') continue; // 跳過空行
+
+        strncpy((*questions)[*numQuestions].question, line, sizeof((*questions)[*numQuestions].question));
+        (*questions)[*numQuestions].question[strcspn((*questions)[*numQuestions].question, "\n")] = '\0'; // 移除換行符
+
+        if (fgets(line, sizeof(line), file) == NULL) break;
+        char* token = strtok(line, ";");
+        int optionIndex = 0;
+        while (token != NULL && optionIndex < MAX_OPTIONS) {
+            strncpy((*questions)[*numQuestions].options[optionIndex], token, sizeof((*questions)[*numQuestions].options[optionIndex]));
+            (*questions)[*numQuestions].options[optionIndex][strcspn((*questions)[*numQuestions].options[optionIndex], "\n")] = '\0'; // 移除換行符
+            token = strtok(NULL, ";");
+            optionIndex++;
+        }
+
+        if (fgets(line, sizeof(line), file) == NULL) break;
+        (*questions)[*numQuestions].correctOption = atoi(line) - 1;
+        (*numQuestions)++;
+    }
+
+    fclose(file);
+}
+
+// 遊戲邏輯函數
+void playGame(Question* questions, int numQuestions) {
+    int score = 0;
+
+    for (int i = 0; i < numQuestions; i++) {
+        printf("\n題目 %d: %s\n", i + 1, questions[i].question);
+        for (int j = 0; j < MAX_OPTIONS; j++) {
+            printf("%d. %s\n", j + 1, questions[i].options[j]);
+        }
+
+        // 啟動計時器執行緒
+        timeUp = 0; // 重置時間標記
+        HANDLE timerHandle = CreateThread(NULL, 0, timerThread, NULL, 0, NULL);
+        if (timerHandle == NULL) {
+            perror("無法創建計時器執行緒");
+            exit(1);
+        }
+
+        int answer = -1;
+        printf("請輸入答案 (1-%d) [限時 %d 秒]: ", MAX_OPTIONS, TIME_LIMIT);
+        while (!timeUp) {
+            if (scanf("%d", &answer) == 1) {
+                break; // 成功輸入答案
+            }
+        }
+        CloseHandle(timerHandle); // 結束計時器執行緒
+
+        if (timeUp) {
+            printf("\n時間到！視為放棄作答！\n");
+        }
+        else if (answer - 1 == questions[i].correctOption) {
+            printf("正確！\n");
+            score++;
+        }
+        else {
+            printf("錯誤！正確答案是 %s\n", questions[i].options[questions[i].correctOption]);
+        }
+
+        // 清空輸入緩衝區
+        while (getchar() != '\n');
+    }
+    printf("\n遊戲結束！你的總分是 %d/%d\n", score, numQuestions);
+}
