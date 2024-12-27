@@ -117,7 +117,8 @@ void selectRandomQuestions(Question* allQuestions, int totalQuestions, Question*
 
 // 遊戲邏輯函數
 void playGame(Question* questions, int numQuestions) {
-    int score = 0;
+    int userScore = 0;
+    int bossScore = 0;
 
     for (int i = 0; i < numQuestions; i++) {
         printf("\n題目 %d: %s\n", i + 1, questions[i].question);
@@ -125,7 +126,8 @@ void playGame(Question* questions, int numQuestions) {
             printf("%d. %s\n", j + 1, questions[i].options[j]);
         }
 
-        int answer = -1; // 預設答案為無效值
+        int userAnswer = -1; // 使用者答案
+        int bossAnswer = (rand() % 100 < 60) ? questions[i].correctOption : rand() % MAX_OPTIONS; // 關主答案，正確率 >60%
         int timeLeft = TIME_LIMIT;
 
         printf("請輸入答案 (1-%d) [限時 %d 秒]: \n", MAX_OPTIONS, TIME_LIMIT);
@@ -141,12 +143,12 @@ void playGame(Question* questions, int numQuestions) {
             if (_kbhit()) { // 檢查是否有鍵盤輸入
                 char input = _getch(); // 獲取輸入字元
                 if (input >= '1' && input <= '4') { // 判斷是否為 1-4
-                    answer = input - '0'; // 轉換為整數
+                    userAnswer = input - '0' - 1; // 轉換為 0 基準索引
                     break;
                 }
                 else {
                     printf("\n輸入錯誤！\n");
-                    answer = -1; // 無效輸入
+                    userAnswer = -1; // 無效輸入
                     break;
                 }
             }
@@ -155,14 +157,28 @@ void playGame(Question* questions, int numQuestions) {
         if (timeLeft == 0) {
             printf("\n時間到！視為放棄作答！\n");
         }
-        else if (answer - 1 == questions[i].correctOption) {
-            printf("正確！\n");
-            score++;
+
+        // 判斷使用者和關主的答案
+        if (userAnswer == questions[i].correctOption) {
+            userScore++;
         }
-        else {
-            printf("錯誤！正確答案是 %s\n", questions[i].options[questions[i].correctOption]);
+
+        if (bossAnswer == questions[i].correctOption) {
+            bossScore++;
         }
+
+        printf("\n正確答案是 %s\n", questions[i].options[questions[i].correctOption]);
+        printf("目前比分 - 使用者: %d, 關主: %d\n", userScore, bossScore);
     }
 
-    printf("\n遊戲結束！你的總分是 %d/%d\n", score, numQuestions);
+    printf("\n遊戲結束！\n");
+    if (userScore > bossScore) {
+        printf("恭喜！你贏了！最終比分 - 使用者: %d, 關主: %d\n", userScore, bossScore);
+    }
+    else if (userScore < bossScore) {
+        printf("很遺憾，關主勝利。最終比分 - 使用者: %d, 關主: %d\n", userScore, bossScore);
+    }
+    else {
+        printf("平局！最終比分 - 使用者: %d, 關主: %d\n", userScore, bossScore);
+    }
 }
