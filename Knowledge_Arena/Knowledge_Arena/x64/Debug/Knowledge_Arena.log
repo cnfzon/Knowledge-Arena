@@ -1,3 +1,1 @@
-﻿  main.c
-C:\Users\admin\Desktop\大學\大一上\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\Knowledge_Arena\main.c(57,13): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  Knowledge_Arena.vcxproj -> C:\Users\admin\Desktop\大學\大一上\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\x64\Debug\Knowledge_Arena.exe
+﻿LINK : fatal error LNK1168: 無法開啟 C:\Users\admin\Desktop\大學\113_1\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\x64\Debug\Knowledge_Arena.exe 進行寫入
