@@ -1,4 +1,4 @@
-#include <locale.h>       // ¬°¨Ï¥Î setlocale
+#include <locale.h>       // ç‚ºä½¿ç”¨ setlocale
 #include <gtk/gtk.h>
 #include <glib.h>
 #include <stdio.h>
@@ -9,10 +9,10 @@
 #define MAX_QUESTIONS      50
 #define MAX_LENGTH         256
 
-#define QUESTIONS_PER_ROUND 5   // ¨C¦^¦XÃD¼Æ
-#define PASS_THRESHOLD      3   // ¹LÃö»İ­nªº¥¿½TÃD¼Æ
+#define QUESTIONS_PER_ROUND 5   // æ¯å›åˆé¡Œæ•¸
+#define PASS_THRESHOLD      3   // éé—œéœ€è¦çš„æ­£ç¢ºé¡Œæ•¸
 
-// === ¥ş°ìÅÜ¼Æ ===
+// === å…¨åŸŸè®Šæ•¸ ===
 static GtkWidget* label_timer;
 static GtkWidget* label_question;
 static GtkWidget* label_score;
@@ -22,33 +22,33 @@ static GtkWidget* button2;
 static GtkWidget* button3;
 static GtkWidget* button4;
 
-// ¡uÄ~Äò / °h¥X¡v«ö¶s
+// ã€Œç¹¼çºŒ / é€€å‡ºã€æŒ‰éˆ•
 static GtkWidget* button_continue;
 static GtkWidget* button_exit;
 
-// Åã¥Ü¦^¦Xµª¹ïÃD¼Æ¡BÄ¹ªº³õ¦¸
+// é¡¯ç¤ºå›åˆç­”å°é¡Œæ•¸ã€è´çš„å ´æ¬¡
 static GtkWidget* label_round;
 static GtkWidget* label_wins;
 
 static int time_left = 15;
 static int current_question = 0;
-static int score = 0;     // ¨C¦^¦X¿n¤À
+static int score = 0;     // æ¯å›åˆç©åˆ†
 static int total_questions = 0;
-static int round_correct = 0;     // ¥»¦^¦Xµª¹ï¼Æ
-static int total_wins = 0;     // Á`Ä¹ªº¦^¦X
+static int round_correct = 0;     // æœ¬å›åˆç­”å°æ•¸
+static int total_wins = 0;     // ç¸½è´çš„å›åˆ
 
-static gboolean round_end = FALSE; // ¬O§_¶i¤J¦^¦Xµ²§ô
+static gboolean round_end = FALSE; // æ˜¯å¦é€²å…¥å›åˆçµæŸ
 
-// === ÃD¥Øµ²ºc ===
+// === é¡Œç›®çµæ§‹ ===
 typedef struct {
     char question[MAX_LENGTH];
     char options[4][MAX_LENGTH];
-    int  answer; // ¥¿½Tµª®×(1~4)
+    int  answer; // æ­£ç¢ºç­”æ¡ˆ(1~4)
 } QuizQuestion;
 
 static QuizQuestion questions[MAX_QUESTIONS];
 
-// === ¨ç¦¡«Å§i ===
+// === å‡½å¼å®£å‘Š ===
 static void     load_questions(void);
 static void     show_next_question(void);
 static gboolean update_timer(gpointer user_data);
@@ -86,17 +86,17 @@ static gboolean update_progress(gpointer user_data) {
     return G_SOURCE_CONTINUE;
 }
 
-// === Åª¨úÃD®w ===
-// ®æ¦¡¥Ü¨Ò (UTF-8 ½s½X):
-// ²Ä¤@ÃD?  
-// ¿ï¶µ1
-// ¿ï¶µ2
-// ¿ï¶µ3
-// ¿ï¶µ4
-// 3        (¥¿½Tµª®× 1~4)
+// === è®€å–é¡Œåº« ===
+// æ ¼å¼ç¤ºä¾‹ (UTF-8 ç·¨ç¢¼):
+// ç¬¬ä¸€é¡Œ?  
+// é¸é …1
+// é¸é …2
+// é¸é …3
+// é¸é …4
+// 3        (æ­£ç¢ºç­”æ¡ˆ 1~4)
 //
-// ²Ä¤GÃD?
-// (¨Ì¦¹Ãş±À)
+// ç¬¬äºŒé¡Œ?
+// (ä¾æ­¤é¡æ¨)
 static void load_questions() {
     FILE* file = fopen("formatted_full_questions.txt", "r");
     if (!file) {
@@ -106,12 +106,12 @@ static void load_questions() {
     }
 
     while (total_questions < MAX_QUESTIONS) {
-        // Åª¨ú°İÃD (¹J¨ì '?' ¬°¤î)
+        // è®€å–å•é¡Œ (é‡åˆ° '?' ç‚ºæ­¢)
         if (fscanf(file, "%255[^?]?%*c", questions[total_questions].question) != 1) {
-            break; // ÀÉ®×µ²§ô©Î®æ¦¡¤£²Å
+            break; // æª”æ¡ˆçµæŸæˆ–æ ¼å¼ä¸ç¬¦
         }
 
-        // Åª¨ú¥|­Ó¿ï¶µ
+        // è®€å–å››å€‹é¸é …
         gboolean readOK = TRUE;
         for (int i = 0; i < 4; i++) {
             char tmpLine[MAX_LENGTH] = { 0 };
@@ -119,13 +119,13 @@ static void load_questions() {
                 readOK = FALSE;
                 break;
             }
-            // ²¾°£´«¦æ²Å
+            // ç§»é™¤æ›è¡Œç¬¦
             tmpLine[strcspn(tmpLine, "\r\n")] = '\0';
             strncpy(questions[total_questions].options[i], tmpLine, MAX_LENGTH - 1);
         }
         if (!readOK) break;
 
-        // Åª¨ú¥¿½Tµª®×
+        // è®€å–æ­£ç¢ºç­”æ¡ˆ
         int ans;
         if (fscanf(file, "%d\n", &ans) != 1) {
             break;
@@ -146,7 +146,7 @@ static void load_questions() {
     }
 }
 
-// === ¼Ğ°O¥¿½Tµª®×¡]¥i¿ï¥\¯à¡^ ===
+// === æ¨™è¨˜æ­£ç¢ºç­”æ¡ˆï¼ˆå¯é¸åŠŸèƒ½ï¼‰ ===
 static void mark_correct_answers() {
     for (int i = 0; i < total_questions; i++) {
         int correct_index = questions[i].answer - 1;
@@ -158,7 +158,7 @@ static void mark_correct_answers() {
     }
 }
 
-// === ÀH¾÷¥´¶ÃÃD¥Ø ===
+// === éš¨æ©Ÿæ‰“äº‚é¡Œç›® ===
 static void randomize_questions() {
     srand((unsigned)time(NULL));
     for (int i = 0; i < total_questions; i++) {
@@ -169,24 +169,24 @@ static void randomize_questions() {
     }
 }
 
-// === ¦w¥şÃö³¬ÀÉ®× ===
+// === å®‰å…¨é—œé–‰æª”æ¡ˆ ===
 static void fclose_safe(FILE* file) {
     if (file) {
         fclose(file);
     }
 }
 
-// === Åã¥Ü¤U¤@ÃD ===
+// === é¡¯ç¤ºä¸‹ä¸€é¡Œ ===
 static void show_next_question() {
     if (total_questions == 0 || current_question >= total_questions) {
         gtk_label_set_text(GTK_LABEL(label_question), "Quiz Completed! Congratulations!");
         return;
     }
 
-    // ­«³]­Ë¼Æ®É¶¡
+    // é‡è¨­å€’æ•¸æ™‚é–“
     time_left = 15;
 
-    // ÃD¥Ø¨Ï¥Î Pango Markup¡A²ÊÅé+©ñ¤j
+    // é¡Œç›®ä½¿ç”¨ Pango Markupï¼Œç²—é«”+æ”¾å¤§
     gtk_label_set_use_markup(GTK_LABEL(label_question), TRUE);
     char markup[512];
     snprintf(markup, sizeof(markup),
@@ -194,14 +194,14 @@ static void show_next_question() {
         questions[current_question].question);
     gtk_label_set_markup(GTK_LABEL(label_question), markup);
 
-    // Åã¥Ü¥|­Ó¿ï¶µ
+    // é¡¯ç¤ºå››å€‹é¸é …
     gtk_button_set_label(GTK_BUTTON(button1), questions[current_question].options[0]);
     gtk_button_set_label(GTK_BUTTON(button2), questions[current_question].options[1]);
     gtk_button_set_label(GTK_BUTTON(button3), questions[current_question].options[2]);
     gtk_button_set_label(GTK_BUTTON(button4), questions[current_question].options[3]);
 }
 
-// === ÀË¬dµª®× ===
+// === æª¢æŸ¥ç­”æ¡ˆ ===
 static void check_answer(int chosen) {
     if (total_questions == 0 || current_question >= total_questions) {
         return;
@@ -221,85 +221,85 @@ static void check_answer(int chosen) {
     check_round_status();
 }
 
-// === ÀË¬d¦^¦Xª¬ºA (¨C 5 ÃD¬°¤@¦^¦X) ===
+// === æª¢æŸ¥å›åˆç‹€æ…‹ (æ¯ 5 é¡Œç‚ºä¸€å›åˆ) ===
 static void check_round_status() {
     int questions_answered_in_round = current_question % QUESTIONS_PER_ROUND;
 
-    // ­Y­è¦n 5 ÃD or ÃD®w¥Î§¹
+    // è‹¥å‰›å¥½ 5 é¡Œ or é¡Œåº«ç”¨å®Œ
     if (questions_answered_in_round == 0 || current_question >= total_questions) {
-        // ÃD®w¤£¨¬ 5 ÃD¤]ºâ§¹¤@¦^¦X
+        // é¡Œåº«ä¸è¶³ 5 é¡Œä¹Ÿç®—å®Œä¸€å›åˆ
         if (current_question >= total_questions) {
             questions_answered_in_round = QUESTIONS_PER_ROUND;
         }
 
         round_end = TRUE;
 
-        // ÁôÂÃ¥|­Ó«ö¶s
+        // éš±è—å››å€‹æŒ‰éˆ•
         gtk_widget_set_visible(button1, FALSE);
         gtk_widget_set_visible(button2, FALSE);
         gtk_widget_set_visible(button3, FALSE);
         gtk_widget_set_visible(button4, FALSE);
 
-        // ¦b¦¹Åã¥Ü¦^¦Xµ²ªG
-        // ­Y round_correct >= PASS_THRESHOLD (3)¡Aªí¥Ü¹LÃö
+        // åœ¨æ­¤é¡¯ç¤ºå›åˆçµæœ
+        // è‹¥ round_correct >= PASS_THRESHOLD (3)ï¼Œè¡¨ç¤ºéé—œ
         if (round_correct >= PASS_THRESHOLD) {
-            // Åã¥Ü¡uÃö¥Dµª¹ï¡GX ÃD¡v
-            // (¨Ì»İ¨D¥iª½±µÅã¥Ü©ó label_question ©Î¥t°µ label)
+            // é¡¯ç¤ºã€Œé—œä¸»ç­”å°ï¼šX é¡Œã€
+            // (ä¾éœ€æ±‚å¯ç›´æ¥é¡¯ç¤ºæ–¼ label_question æˆ–å¦åš label)
             char msg[64];
-            snprintf(msg, sizeof(msg), "Ãö¥Dµª¹ï¡G%d ÃD", round_correct);
+            snprintf(msg, sizeof(msg), "é—œä¸»ç­”å°ï¼š%d é¡Œ", round_correct);
             gtk_label_set_text(GTK_LABEL(label_question), msg);
 
-            // ¼W¥[¡uÄ¹ªº³õ¦¸¡v
+            // å¢åŠ ã€Œè´çš„å ´æ¬¡ã€
             total_wins++;
             char wins_buf[64];
-            snprintf(wins_buf, sizeof(wins_buf), "Ä¹ªº³õ¦¸¡G%d", total_wins);
+            snprintf(wins_buf, sizeof(wins_buf), "è´çš„å ´æ¬¡ï¼š%d", total_wins);
             gtk_label_set_text(GTK_LABEL(label_wins), wins_buf);
         }
         else {
-            gtk_label_set_text(GTK_LABEL(label_question), "ÂôÃö¥¢±Ñ¡I");
+            gtk_label_set_text(GTK_LABEL(label_question), "é—–é—œå¤±æ•—ï¼");
         }
 
-        // ¦b label_round Åã¥Ü¥»¦^¦XÃD¼Æ
+        // åœ¨ label_round é¡¯ç¤ºæœ¬å›åˆé¡Œæ•¸
         char round_buf[64];
-        snprintf(round_buf, sizeof(round_buf), "Ãö¥D¥»¦^¦Xµª¹ï¡G%d / %d",
+        snprintf(round_buf, sizeof(round_buf), "é—œä¸»æœ¬å›åˆç­”å°ï¼š%d / %d",
             round_correct, QUESTIONS_PER_ROUND);
         gtk_label_set_text(GTK_LABEL(label_round), round_buf);
 
-        // ¨C¦^¦Xµ²§ô -> ­«¸m¤À¼Æ
+        // æ¯å›åˆçµæŸ -> é‡ç½®åˆ†æ•¸
         score = 0;
         gtk_label_set_text(GTK_LABEL(label_score), "Correct Answers: 0");
 
-        // Åã¥Ü¡uÄ~Äò / °h¥X¡v«ö¶s
+        // é¡¯ç¤ºã€Œç¹¼çºŒ / é€€å‡ºã€æŒ‰éˆ•
         gtk_widget_set_visible(button_continue, TRUE);
         gtk_widget_set_visible(button_exit, TRUE);
     }
 }
 
-// === ÂIÀ»¡uÄ~Äò¹CÀ¸¡v ===
+// === é»æ“Šã€Œç¹¼çºŒéŠæˆ²ã€ ===
 static void continue_game(void) {
     round_correct = 0;
     round_end = FALSE;
 
-    // ÁôÂÃ¡uÄ~Äò / °h¥X¡v«ö¶s
+    // éš±è—ã€Œç¹¼çºŒ / é€€å‡ºã€æŒ‰éˆ•
     gtk_widget_set_visible(button_continue, FALSE);
     gtk_widget_set_visible(button_exit, FALSE);
 
-    // Åã¥Ü¥|­Ó«ö¶s
+    // é¡¯ç¤ºå››å€‹æŒ‰éˆ•
     gtk_widget_set_visible(button1, TRUE);
     gtk_widget_set_visible(button2, TRUE);
     gtk_widget_set_visible(button3, TRUE);
     gtk_widget_set_visible(button4, TRUE);
 
-    // ­YÃD¥Ø©|¦³³Ñ¾l¡AÄ~Äò¥XÃD
+    // è‹¥é¡Œç›®å°šæœ‰å‰©é¤˜ï¼Œç¹¼çºŒå‡ºé¡Œ
     if (current_question < total_questions) {
         show_next_question();
     }
     else {
-        gtk_label_set_text(GTK_LABEL(label_question), "©Ò¦³ÃD¥Ø³£µª§¹¤F¡I");
+        gtk_label_set_text(GTK_LABEL(label_question), "æ‰€æœ‰é¡Œç›®éƒ½ç­”å®Œäº†ï¼");
     }
 }
 
-// === ÂIÀ»¡u°h¥X¹CÀ¸¡v ===
+// === é»æ“Šã€Œé€€å‡ºéŠæˆ²ã€ ===
 static void exit_game(void) {
     GApplication* app = g_application_get_default();
     if (app) {
@@ -307,26 +307,26 @@ static void exit_game(void) {
     }
 }
 
-// === ­«·s¶}©l (­Y¦³»İ­n) ===
+// === é‡æ–°é–‹å§‹ (è‹¥æœ‰éœ€è¦) ===
 static void restart_quiz() {
     current_question = 0;
     score = 0;
     round_correct = 0;
     time_left = 15;
-    // total_wins ¤£¤@©w­n­«¸m¡Aµø»İ¨D¨M©w
+    // total_wins ä¸ä¸€å®šè¦é‡ç½®ï¼Œè¦–éœ€æ±‚æ±ºå®š
 
     randomize_questions();
     gtk_label_set_text(GTK_LABEL(label_score), "Correct Answers: 0");
-    gtk_label_set_text(GTK_LABEL(label_round), "Ãö¥D¥»¦^¦Xµª¹ï¡G0 / 5");
+    gtk_label_set_text(GTK_LABEL(label_round), "é—œä¸»æœ¬å›åˆç­”å°ï¼š0 / 5");
     show_next_question();
 }
 
-// === GUI ªì©l¤Æ ===
+// === GUI åˆå§‹åŒ– ===
 static void activate(GtkApplication* app, gpointer user_data) {
     GtkWidget* window;
     GtkWidget* box;
 
-    // «Ø¥ß¥Dµøµ¡
+    // å»ºç«‹ä¸»è¦–çª—
     window = gtk_application_window_new(app);
     gtk_window_set_title(GTK_WINDOW(window), "Quiz App (UTF-8)");
     gtk_window_set_default_size(GTK_WINDOW(window), 400, 600);
@@ -344,23 +344,23 @@ static void activate(GtkApplication* app, gpointer user_data) {
 
     // Question Label
     label_question = gtk_label_new("");
-    // ­Y­n¤¤¤å¹w¥ıÅã¥Ü¡A¤]­n½T«O UTF-8
-    // gtk_label_set_text(GTK_LABEL(label_question), "¸ü¤J¤¤...");
+    // è‹¥è¦ä¸­æ–‡é å…ˆé¡¯ç¤ºï¼Œä¹Ÿè¦ç¢ºä¿ UTF-8
+    // gtk_label_set_text(GTK_LABEL(label_question), "è¼‰å…¥ä¸­...");
     gtk_box_append(GTK_BOX(box), label_question);
 
     // Progress Bar
     progress_bar = gtk_progress_bar_new();
     gtk_box_append(GTK_BOX(box), progress_bar);
 
-    // Åã¥Ü¥»¦^¦Xµª¹ï¼Æ
-    label_round = gtk_label_new("Ãö¥D¥»¦^¦Xµª¹ï¡G0 / 5");
+    // é¡¯ç¤ºæœ¬å›åˆç­”å°æ•¸
+    label_round = gtk_label_new("é—œä¸»æœ¬å›åˆç­”å°ï¼š0 / 5");
     gtk_box_append(GTK_BOX(box), label_round);
 
-    // Åã¥ÜÄ¹ªº³õ¦¸
-    label_wins = gtk_label_new("Ä¹ªº³õ¦¸¡G0");
+    // é¡¯ç¤ºè´çš„å ´æ¬¡
+    label_wins = gtk_label_new("è´çš„å ´æ¬¡ï¼š0");
     gtk_box_append(GTK_BOX(box), label_wins);
 
-    // ¥|­Ó¿ï¶µ«ö¶s (¥ª¹ï»ô)
+    // å››å€‹é¸é …æŒ‰éˆ• (å·¦å°é½Š)
     button1 = gtk_button_new_with_label("1");
     g_signal_connect_swapped(button1, "clicked", G_CALLBACK(check_answer), GINT_TO_POINTER(1));
     gtk_widget_set_halign(button1, GTK_ALIGN_START);
@@ -382,31 +382,31 @@ static void activate(GtkApplication* app, gpointer user_data) {
     gtk_box_append(GTK_BOX(box), button3);
     gtk_box_append(GTK_BOX(box), button4);
 
-    // ¡uÄ~Äò / °h¥X¡v«ö¶s (¥ıÁôÂÃ)
-    button_continue = gtk_button_new_with_label("Ä~Äò¹CÀ¸");
+    // ã€Œç¹¼çºŒ / é€€å‡ºã€æŒ‰éˆ• (å…ˆéš±è—)
+    button_continue = gtk_button_new_with_label("ç¹¼çºŒéŠæˆ²");
     gtk_widget_set_visible(button_continue, FALSE);
     gtk_box_append(GTK_BOX(box), button_continue);
     g_signal_connect(button_continue, "clicked", G_CALLBACK(continue_game), NULL);
 
-    button_exit = gtk_button_new_with_label("°h¥X¹CÀ¸");
+    button_exit = gtk_button_new_with_label("é€€å‡ºéŠæˆ²");
     gtk_widget_set_visible(button_exit, FALSE);
     gtk_box_append(GTK_BOX(box), button_exit);
     g_signal_connect(button_exit, "clicked", G_CALLBACK(exit_game), NULL);
 
-    // ÅªÃD®w
+    // è®€é¡Œåº«
     load_questions();
     show_next_question();
 
-    // ±Ò°Ê­p®É¾¹ (¨C¬í)
+    // å•Ÿå‹•è¨ˆæ™‚å™¨ (æ¯ç§’)
     g_timeout_add_seconds(1, update_timer, NULL);
     g_timeout_add_seconds(1, update_progress, NULL);
 
     gtk_window_present(GTK_WINDOW(window));
 }
 
-// === ¥Dµ{¦¡¤J¤f ===
+// === ä¸»ç¨‹å¼å…¥å£ ===
 int main(int argc, char** argv) {
-    // **¥ı³]©w locale** => Åı¤¤¤å¯à¥¿½T³B²z (­Y¨t²Î¤ä´© zh_TW.utf8)
+    // **å…ˆè¨­å®š locale** => è®“ä¸­æ–‡èƒ½æ­£ç¢ºè™•ç† (è‹¥ç³»çµ±æ”¯æ´ zh_TW.utf8)
     setlocale(LC_ALL, "");
 
     GtkApplication* app;
