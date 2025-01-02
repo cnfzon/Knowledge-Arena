@@ -1,1 +1,2 @@
-﻿LINK : fatal error LNK1168: 無法開啟 C:\Users\admin\Desktop\大學\113_1\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\x64\Debug\Knowledge_Arena.exe 進行寫入
+﻿  LINK : 最後的累加連結找不到或未建置 C:\Users\admin\Desktop\大學\113_1\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\x64\Debug\Knowledge_Arena.exe，正在執行完整連結
+  Knowledge_Arena.vcxproj -> C:\Users\admin\Desktop\大學\113_1\113高階程式設計\final_project\Knowledge-Arena\Knowledge_Arena\x64\Debug\Knowledge_Arena.exe
