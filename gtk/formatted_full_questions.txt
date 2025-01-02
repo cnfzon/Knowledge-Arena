@@ -1,0 +1,1049 @@
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
+
+Who invented the C programming language?
+1. Dennis Ritchie
+2. Brian Kernighan
+3. Bell Labs
+4. Guido van Rossum
+Answer: 1
+
+What is the full form of VHDL?
+1. VHSIC Hardware Description Language
+2. Virtual Hardware Description Language
+3. Verified HDL
+4. Virtual HDL
+Answer: 1
+
+What is the main purpose of VHDL?
+1. Hardware description
+2. Software development
+3. Web design
+4. Data analysis
+Answer: 1
+
+Who invented the Java programming language?
+1. Sun Microsystems
+2. Microsoft
+3. Apple
+4. Google
+Answer: 1
+
+Which keyword is used to inherit a class in Java?
+1. extends
+2. inherits
+3. implements
+4. super
+Answer: 1
+
+What type of language is Java?
+1. Interpreted
+2. Compiled
+3. Both Compiled and Interpreted
+4. Script
+Answer: 3
+
+Who is the creator of Python?
+1. Guido van Rossum
+2. Dennis Ritchie
+3. Brian Kernighan
+4. James Gosling
+Answer: 1
+
+What does HTML stand for?
+1. Hyper Text Markup Language
+2. Hyperlinks and Text Markup Language
+3. Home Tool Markup Language
+4. Hyper Text Marked Language
+Answer: 1
+
+Which tag is used to define hyperlinks in HTML?
+1. <a>
+2. <p>
+3. <b>
+4. <img>
+Answer: 1
